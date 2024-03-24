@@ -1,0 +1,203 @@
+/* Author: Dumar Ruge */
+
+:root {
+    --myred: rgb(208, 51, 34);
+    --light-grey: rgb(237, 237, 237)
+}
+
+@font-face {
+    font-family: "Garet";
+    src: url(..//fonts/Spacetype\ -\ Garet\ Book.otf) format("otf");
+    font-family: "Kollektif";
+    src: url(..//fonts/Kollektif.ttf) format("ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Garet";
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 40% auto;
+}
+
+.child-content {
+
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#img-container {
+    background-image: url("https://as1.ftcdn.net/v2/jpg/04/17/24/74/1000_F_417247450_yl9EUyniTgmj2iKpB4BwZUjVbAgePNVD.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-wrapper {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper header {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--myred);
+    margin-left: 20px;
+}
+
+.form-wrapper form {
+    position: relative;
+}
+
+
+.form-wrapper form .details {
+    margin-top: 30px;
+}
+
+.form-wrapper form .details.ID {
+    margin-top: 20px;
+}
+
+.form-wrapper form .title {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+
+.form-wrapper form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+form .fields .input-box {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+
+
+
+.input-box label,
+.input-box select {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.input-box input,
+.input-box select {
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+
+}
+
+
+.input-box input,
+.input-box select:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-box input,
+.input-box select[type="date"] {
+    color: #707070;
+
+}
+
+.input-box input,
+.input-box select[type="date"]:valid {
+    color: #333;
+
+}
+
+
+#user-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#user-img img {
+    height: 80px;
+}
+
+#save-button {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+
+}
+
+
+@media screen and (max-width: 720px) {
+    .container {
+        grid-template-columns: 1fr;
+        /* Switch to one column when screen size is less than 580px */
+        grid-template-rows: auto;
+        /* Two rows */
+    }
+
+    #img-container {
+        display: none;
+    }
+
+    .form-wrapper form .fields {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    form .fields .input-box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 4px 0;
+    }
+
+    .form-wrapper {
+        position: relative;
+        width: 90%;
+        background-color: white;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 20px 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+}

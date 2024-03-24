@@ -1,0 +1,111 @@
+<!-- Author: Dumar Ruge -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//css/profile.css">
+    <link href="..//css/jquery-countryselector.min.css" rel="stylesheet"> <!-- JQuery CountrySelector CSS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="..//js/profile.js"></script>
+
+    <link href="..//lib/jquery-ui-1.13.2.custom/jquery-ui.css" rel="stylesheet">
+
+    <title>Your Profile</title>
+</head>
+
+<body>
+    <div id="main-container" class="container">
+        <div id="img-container" class="child-content"></div>
+
+        <div class="form-container">
+            <div class="form-wrapper">
+                <div id="user-img">
+                    <img id="user-img"
+                        src="https://images.rawpixel.com/image_transparent_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L3BmLWljb240LWppcjIwNjQtcG9yLWwtam9iNzg4LnBuZw.png"
+                        alt="User Image">
+                    <header>Your Profile</header>
+                </div>
+                <form id="myform">
+                    <div class="form">
+                        <div class="details personal">
+
+
+                            <span class="title">Personal Details</span>
+
+
+                            <div class="fields">
+                                <div class="input-box">
+                                    <label for="full-name">Full Name</label>
+                                    <input id="full-name" name="full-name" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="birthday">Date of Birthay</label>
+                                    <input id="birthday" name="birthday" type="date" placeholder="Enter birth date">
+                                </div>
+                                <div class="input-box">
+                                    <label for="emailInput">Email</label>
+                                    <input id="emailInput" name="emailInput" type="text" placeholder="Email">
+                                </div>
+                                <div class="input-box">
+                                    <label for="address">Address</label>
+                                    <input id="address" name="address" type="text" placeholder="Enter your address"
+                                        required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="phone">Mobile Phone</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Enter mobile number">
+                                </div>
+                                <div class="input-box">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender" id="">
+                                        <option value="">Select your Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="no">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-box">
+                                    <label for="country-selector">Country</label>
+                                    <!-- JQuery  Country Selector plugin       
+                                    https://www.jqueryscript.net/form/Simple-Flexible-jQuery-Country-Select-Box-Plugin-countrySelector.html -->
+                                    <select id="country-selector" value="SYC" data-role="country-selector"></select>
+                                    <!-- Selector Plugin -->
+                                </div>
+                                <div class="input-box">
+                                    <label for="province">Province</label>
+                                    <input id="province" name="province" type="text" placeholder="Enter Province" ,
+                                        required>
+                                </div>
+                                <div class="input-box">
+                                    <label for="postal-code">Postal Code</label>
+                                    <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code"
+                                        required>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script for JQuery CountrySelector -->
+                    <script src="..//js/jquery.countrySelector.js"></script>
+
+                    <div id="save-button"><button id="button">Upload</button></div>
+                    <script src="..//lib/jquery-ui-1.13.2.custom/external/jquery/jquery.js"></script>
+                    <script src="..//lib/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+                    <script>
+                        $("#button").button();
+                    </script>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
